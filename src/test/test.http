@@ -1,8 +1,8 @@
-GET localhost:8080/api/example/list
+GET 192.168.100.109:8080/api/example/list
 
 ### get list
 
-POST localhost:8080/api/example/save
+POST 192.168.100.109:8080/api/example/save
 Content-Type: application/json
 
 {

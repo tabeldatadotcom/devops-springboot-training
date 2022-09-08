@@ -15,13 +15,16 @@ services:
     networks:
       - native_cloud
   backend:
-    image: dimmaryanto93/springboot-app:v3
+    image: dimmaryanto93/springboot-app:v4
     environment:
-      - SPRING_DATASOURCE_URL=jdbc:postgresql://postgres:5432/postgres
+      - DATABASE_HOST=postgres
+      - DATABASE_PORT=5432
+      - DATABASE_USER=postgres
+      - DATABASE_PASSWORD=mysecretpassword
     build: 
       dockerfile: Dockerfile
       context: .
     ports:
-      - 8080:8080
+      - "8080:8080"
     networks:
       - native_cloud
